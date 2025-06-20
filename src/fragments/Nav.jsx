@@ -16,7 +16,7 @@ function Nav() {
     try {
         // MVC 방식에서는 a사이트에서 수신한 쿠키를 브라우저가 자동 전송한다 vs REST는 그런 거 없다
         // withCredentials:true 쿠키를 서버로 자동 전송해라
-        await axios.post('http://localhost:8080/logout', {withCredentials:true});
+        await axios.post('http://localhost:8080/logout', null, {withCredentials:true});
         setLogout();
     } catch(err) {
         console.log(err);
